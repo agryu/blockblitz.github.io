@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Block Blitz</title>
+    <link rel="stylesheet" href="2048.css">
+    <link rel="icon" type="image/x-icon" href="blockblitz logo.ico">
+    <script src="2048.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <video autoplay muted loop id="backgroundVideo"> <source src="Untitled Design.mp4" type="video/mp4"></video>
+    <div class="container">
+        <img src="Header.png" alt="Description of Image" id="top-center-image">
+        <div class="header">
+            <div onclick="showLeaderboard()" class="leaderboard-button">🏆</div>
+            <div class="menu">
+                <div class="scores-container">
+                    <div class="currentScore">
+                        <h2>SCORE <br><span id="score">0</span></h2>
+                    </div>
+                    <div class="BestScore">
+                        <h2>BEST <br><span id="bestscore">0</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="functions">
+                <div onclick="restart()" class="restart">
+                    <span class=reload>&#x21bb;</span>
+                </div><br>
+                <div onclick="toggleGrid()" class="grid-container">
+                    <span class="grid" id="grid">5x5</span>
+                </div>
+            </div>
+        </div>
+        <div class="board-container">
+            <div id="board">
+            </div>
+        </div>
+    </div>
+
+    <div id="leaderboardPopup" class="leaderboard-popup">
+        <span class="close" onclick="closeLeaderboardPopup()">&times;</span>
+        <div id="leaderboard"></div>
+    </div>
+
+    <div id="modal" class="modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content"></div>
+    </div>
+</body>
+</html>
